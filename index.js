@@ -1,15 +1,16 @@
 function setText(selector, text) {
-	/*
-		`selector` is string with CSS-like selector
-		`text` - is just string with text we want to change
-	*/
+    console.log(document.querySelector(selector));
 
-	// Write your code here
+    var nodes = document.querySelector(selector);
+    nodes.innerText = text;
 }
 
-
 function setTextAll(selector, text) {
-	// Write your code here
+    var nodes = document.querySelectorAll(selector);
+
+    for (i = 0; i < nodes.length; ++i) {
+        nodes[i].innerText = text;
+    }
 }
 
 
